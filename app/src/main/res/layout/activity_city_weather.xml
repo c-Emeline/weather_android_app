@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/iconeTemp"
+    tools:context=".CityWeather">
+
+    <TextView
+        android:id="@+id/cityNameWeather"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/citytxt"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tempWeather"
+        android:layout_width="284dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:text="@string/tempWeather"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pressureWeather"
+        app:layout_constraintEnd_toStartOf="@+id/tempView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameWeather" />
+
+    <TextView
+        android:id="@+id/pressureWeather"
+        android:layout_width="284dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:text="@string/pressureWeather"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/humidityWeather"
+        app:layout_constraintEnd_toStartOf="@+id/pressureView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempWeather" />
+
+    <TextView
+        android:id="@+id/humidityWeather"
+        android:layout_width="284dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="220dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:text="@string/humidityWeather"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/humidityView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressureWeather" />
+
+    <com.example.weather_emeline_creusot.TempView
+        android:id="@+id/tempView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/iconeTemp"
+        app:layout_constraintBottom_toTopOf="@+id/pressureView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tempWeather"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameWeather" />
+
+    <com.example.weather_emeline_creusot.HumidityView
+        android:id="@+id/humidityView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="210dp"
+        android:contentDescription="@string/iconeHumidity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humidityWeather"
+        app:layout_constraintTop_toBottomOf="@+id/pressureView" />
+
+    <com.example.weather_emeline_creusot.PressureView
+        android:id="@+id/pressureView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/iconePressure"
+        app:layout_constraintBottom_toTopOf="@+id/humidityView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pressureWeather"
+        app:layout_constraintTop_toBottomOf="@+id/tempView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

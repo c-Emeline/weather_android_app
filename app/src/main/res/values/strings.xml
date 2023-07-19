@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weather_Emeline_Creusot</string>
+    <string name="meteotxt">Météo</string>
+    <string name="citytxt">Ville</string>
+    <string name="tempWeather">Température</string>
+    <string name="pressureWeather">Pression</string>
+    <string name="humidityWeather">Humidité</string>
+    <string name="meteoIllustration">Illustration : un nuage et un soleil</string>
+    <string name="iconeTemp">Icone thermomètre, indicateur pour la température</string>
+    <string name="iconePressure">Icone échelle, indicateur pour la pression</string>
+    <string name="iconeHumidity">Icone cercles, indicateur pour l\'humidité</string>
+</resources>
